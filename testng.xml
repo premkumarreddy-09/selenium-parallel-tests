@@ -1,0 +1,81 @@
+<!--<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">-->
+<!--<suite name="Selenium101Suite" parallel="tests" thread-count="3">-->
+<!--    <test name="SimpleFormTest">-->
+<!--        <classes>-->
+<!--            <class name="tests.SimpleFormTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="SliderTest">-->
+<!--        <classes>-->
+<!--            <class name="tests.SliderTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="InputFormTest">-->
+<!--        <classes>-->
+<!--            <class name="tests.InputFormTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+
+<!--<suite name="LambdaSuite" parallel="classes" thread-count="3">-->
+<!--    <test name="ParallelTests">-->
+<!--        <classes>-->
+<!--            <class name="tests.SimpleFormTest"/>-->
+<!--            <class name="tests.SliderTest"/>-->
+<!--            <class name="tests.InputFormTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+<!--<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">-->
+<!--<suite name="Selenium101Suite" parallel="methods" thread-count="6">-->
+
+<!--    <test name="SimpleFormTestMethod">-->
+<!--        <classes>-->
+<!--            <class name="tests.SimpleFormTest">-->
+<!--                <methods>-->
+<!--                    <include name="testSimpleFormScenario"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="SliderTestMethod">-->
+<!--        <classes>-->
+<!--            <class name="tests.SliderTest">-->
+<!--                <methods>-->
+<!--                    <include name="testSliderTo100"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="InputFormTestMethod">-->
+<!--        <classes>-->
+<!--            <class name="tests.InputFormTest">-->
+<!--                <methods>-->
+<!--                    <include name="testInputFormSubmit"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--</suite>-->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Selenium101Suite" parallel="tests" thread-count="2">
+    <test name="ChromeTests">
+        <parameter name="browser" value="Chrome" />
+        <classes>
+            <class name="tests.SimpleFormTest" />
+            <class name="tests.SliderTest" />
+            <class name="tests.InputFormTest" />
+        </classes>
+    </test>
+    <test name="FirefoxTests">
+        <parameter name="browser" value="Firefox" />
+        <classes>
+            <class name="tests.SimpleFormTest" />
+            <class name="tests.SliderTest" />
+            <class name="tests.InputFormTest" />
+        </classes>
+    </test>
+</suite>
